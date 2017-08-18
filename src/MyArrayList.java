@@ -8,37 +8,37 @@ public class MyArrayList<T> {   //далее вместо Т будет подс
     public ArrayList[] array1;
     int index;
 
-    public void add(T value ){
+    public Object add(T value ){
 
         Object[] arrayBigger = new Object[array.length + 1];
         System.arraycopy(array, 0, arrayBigger, 0, array.length);
         int t = arrayBigger.length-1;
         arrayBigger [t] = value;
         array = arrayBigger;
+        return array;
     }
 
-
-
     //remove(int index) удаляет элемент под индексом
-    public void remove(int index){
-
-       // Iterator<MyArrayList> it = array1.iterator();
+    public Object remove(int index){
         for (int i = 0; i < array.length; i++) {
             array[index] = null;
 
         }
+        return array;
     }
 
     //clear() очищает коллекцию
-    public void clear(){
+    public Object clear(){
         for (int i = 0; i < array.length; i++) {
             array[i] = null;
         }
+        return array;
     }
 
     //size() возвращает размер коллекции
     int total=0;
-    public int size(){
+
+    public Object size(){
         for (int i = 0; i < array.length; i++){
             total += Arrays.asList(array).indexOf(i);
         }
@@ -46,11 +46,9 @@ public class MyArrayList<T> {   //далее вместо Т будет подс
     }
 
     int t;
-    public int get(int index) {
-        for (int i = 0; i < 5; i++){
-            t = Arrays.asList(array[index]).indexOf(i);;
-        }
-        return t;
+    public Object get(int index) {
+
+        return array[index];
     }
 
 }
