@@ -10,7 +10,7 @@ size() возвращает размер коллекции
 get(int index) возвращает элемент под индексом
 */
 public class MyLinkedList<T> {
-    public T item;
+  /*  public T value;
     public MyLinkedList<T> next;
     public MyLinkedList<T> prev;
 
@@ -19,4 +19,10 @@ public class MyLinkedList<T> {
         data = d;
         next = n;
     }
+
+    public void add(T value) {
+        MyLinkedList<T> node = new MyLinkedList<>(value, null, last);
+        last.next = node;
+        last = node;
+    }*/
 }

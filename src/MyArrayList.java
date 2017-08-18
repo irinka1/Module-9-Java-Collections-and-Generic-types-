@@ -8,14 +8,13 @@ public class MyArrayList<T> {   //далее вместо Т будет подс
     public ArrayList[] array1;
     int index;
 
-    public Object add(T value ){
+    public void add(T value ){
 
         Object[] arrayBigger = new Object[array.length + 1];
         System.arraycopy(array, 0, arrayBigger, 0, array.length);
         int t = arrayBigger.length-1;
         arrayBigger [t] = value;
         array = arrayBigger;
-        return array;
     }
 
     //remove(int index) удаляет элемент под индексом
@@ -37,7 +36,6 @@ public class MyArrayList<T> {   //далее вместо Т будет подс
 
     //size() возвращает размер коллекции
     int total=0;
-
     public Object size(){
         for (int i = 0; i < array.length; i++){
             total += Arrays.asList(array).indexOf(i);
