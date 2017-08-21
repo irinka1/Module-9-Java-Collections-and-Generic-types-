@@ -7,15 +7,15 @@ public class Main {
     public static void main(String[] args) {
 
 
-       MyArrayList myList = new MyArrayList<>();
+       MyArrayList<Integer> myList = new MyArrayList<Integer>(5,new Object[]{1,8,8,9});
 
 
-        myList.add(25);
-        myList.add(15);
-        myList.add(14);
-        myList.add(8);
+        myList.add(1);
+        myList.add(2);
+        myList.add(3);
+        myList.add(4);
         myList.remove(1);
-        //myList.clear();
+        myList.clear();
         myList.size();
         myList.get(2);     //get(int index) возвращает элемент под индексом
 

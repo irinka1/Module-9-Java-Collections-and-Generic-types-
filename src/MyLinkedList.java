@@ -1,4 +1,4 @@
-import javax.xml.soap.Node;
+
 /*Написать свой класс MyLinkedList как аналог классу LinkedList.
 Нельзя использовать массив. Каждый элемент должен быть отдельным объектом-посредником(Node - нода)
  который хранит ссылку на прошлый и следующий элемент коллекции(двусвязный список).
@@ -10,19 +10,31 @@ size() возвращает размер коллекции
 get(int index) возвращает элемент под индексом
 */
 public class MyLinkedList<T> {
-  /*  public T value;
-    public MyLinkedList<T> next;
-    public MyLinkedList<T> prev;
+    Node<T> first;
+    Node<T> last;
+    int size;
 
-    Object data;
-    MyLinkedList(Object d,Node n) {
-        data = d;
-        next = n;
+
+    public MyLinkedList(){
+        first = new Node<T>(null, null, null);
+        last = first;
+        size = 0;
     }
 
-    public void add(T value) {
-        MyLinkedList<T> node = new MyLinkedList<>(value, null, last);
+    public void add(T item) {
+        Node<T> node = new Node<>(item, null, last);
         last.next = node;
         last = node;
-    }*/
+    }
+
+    public void show() {
+        Node<T> iterator = first;
+        if (iterator == null) return;
+
+        do {
+            System.out.print("" + iterator.item + " ");
+            iterator = iterator.next;
+        } while (iterator != null);
+        System.out.println();
+    }
 }

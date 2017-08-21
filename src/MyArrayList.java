@@ -3,10 +3,16 @@ import java.util.Arrays;
 import java.util.Iterator;
 
 public class MyArrayList<T> {   //далее вместо Т будет подставляться класс
-
-    public Object [] array;
-    public ArrayList[] array1;
     int index;
+    public Object [] array;;
+    int size;
+
+
+    public MyArrayList(int size, Object[] array){
+        this.array = array;
+        this.size  = size;
+    }
+
 
     public void add(T value ){
 
@@ -15,37 +21,36 @@ public class MyArrayList<T> {   //далее вместо Т будет подс
         int t = arrayBigger.length-1;
         arrayBigger [t] = value;
         array = arrayBigger;
+        size++;
     }
 
     //remove(int index) удаляет элемент под индексом
-    public Object remove(int index){
+    public void remove(int index){
         for (int i = 0; i < array.length; i++) {
             array[index] = null;
 
         }
-        return array;
+
     }
 
     //clear() очищает коллекцию
-    public Object clear(){
+    public void clear(){
         for (int i = 0; i < array.length; i++) {
             array[i] = null;
         }
-        return array;
+
     }
 
     //size() возвращает размер коллекции
     int total=0;
-    public Object size(){
+    public void size(){
         for (int i = 0; i < array.length; i++){
             total += Arrays.asList(array).indexOf(i);
         }
-        return total;
     }
 
-    int t;
-    public Object get(int index) {
 
+    public Object get(int index) {
         return array[index];
     }
 
