@@ -51,7 +51,15 @@ public class MyArrayList<T> {   //далее вместо Т будет подс
 
 
     public Object get(int index) {
+
         return array[index];
+    }
+
+
+    public void print() {
+        for (Object element : array) {
+            System.out.print("" + element + " ");
+        }
     }
 
 }

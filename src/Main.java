@@ -14,13 +14,32 @@ public class Main {
         myList.add(2);
         myList.add(3);
         myList.add(4);
+        myList.print();
+        System.out.println();
         myList.remove(1);
+        myList.print();
+        System.out.println();
         myList.clear();
         myList.size();
-        myList.get(2);     //get(int index) возвращает элемент под индексом
+        myList.get(2);
+        myList.print();
+        System.out.println();
+
+        MyLinkedList myLinkedList = new MyLinkedList(){};
+        myLinkedList.add(5);
+        myLinkedList.add(1);
+        myLinkedList.add(65);
+        myLinkedList.add(51);
+           myLinkedList.show();
+        System.out.println();
+        myLinkedList.remove(5);
+           myLinkedList.show();
+        System.out.println();
+        myLinkedList.clear();
+          myLinkedList.show();
 
 
-        System.out.println("Numbers = " + myList);
+
     }
 
 }
