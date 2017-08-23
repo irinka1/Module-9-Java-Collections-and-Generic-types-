@@ -32,7 +32,7 @@ public class Main {
         myLinkedList.add(51);
            myLinkedList.show();
         System.out.println();
-        myLinkedList.remove(5);
+        myLinkedList.remove(2);
            myLinkedList.show();
         System.out.println();
         myLinkedList.clear();

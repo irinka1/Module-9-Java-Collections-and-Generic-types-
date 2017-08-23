@@ -42,10 +42,10 @@ public class MyLinkedList<T> {
         System.out.println();
     }
 
-    public void remove(int index){
+    /*public void remove(int index){
         Node<T> nodeRemove = getNode(index);
-        if (nodeRemove != first){
-            nodeRemove.prev.next = nodeRemove.next;
+       if (nodeRemove != first){
+            nodeRemove=null;//.prev.next = nodeRemove.next;
         } else {
             first = nodeRemove.next;
         }
@@ -56,8 +56,8 @@ public class MyLinkedList<T> {
         }
         nodeRemove = null;
         size--;
-    }
-  /*public void remove(T item){
+    }*/
+  public void remove(T item){
       Node<T> currentNode = first;
       Node<T> previousNode = null;
       while(currentNode != null){
@@ -76,7 +76,7 @@ public class MyLinkedList<T> {
           currentNode = currentNode.next;
       }
 
-  }*/
+  }
 
 
     public void clear(){
