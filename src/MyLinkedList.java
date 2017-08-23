@@ -42,10 +42,14 @@ public class MyLinkedList<T> {
         System.out.println();
     }
 
+    public int size(){
+        return size;
+    }
+
     /*public void remove(int index){
         Node<T> nodeRemove = getNode(index);
        if (nodeRemove != first){
-            nodeRemove=null;//.prev.next = nodeRemove.next;
+            nodeRemove.prev.next = nodeRemove.next;
         } else {
             first = nodeRemove.next;
         }
@@ -57,7 +61,7 @@ public class MyLinkedList<T> {
         nodeRemove = null;
         size--;
     }*/
-  public void remove(T item){
+  /*public void remove(T item){
       Node<T> currentNode = first;
       Node<T> previousNode = null;
       while(currentNode != null){
@@ -76,18 +80,32 @@ public class MyLinkedList<T> {
           currentNode = currentNode.next;
       }
 
-  }
+  }*/
+
+    /*public void remove(int index)
+    {
+        Node<T> currNode = first;
+            for (int i = 0; i < index; i++) {
+                currNode = currNode.next;
+            }
+            Node<T> temp = currNode;
+            currNode = temp.getPrevNode();
+            currNode.setNextNode(temp.getNextNode());
+            temp = null;
+            size--;
 
 
-    public void clear(){
+    }*/
+
+
+    /*public void clear(){
         int originalSize = size;
         for (int i = 0; i < originalSize; i++){
             remove(0);
         }
-    }
+    }*/
 
     public Node<T> getNode(int index){
-
             Node<T> iterator = first;
             if (iterator == null) return null;
             for (int i = 0; i < index; i++){
@@ -99,4 +117,6 @@ public class MyLinkedList<T> {
     public T get(int index){
         return getNode(index).item;
     }
+
+
 }
