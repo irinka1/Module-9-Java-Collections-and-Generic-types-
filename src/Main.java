@@ -29,15 +29,11 @@ public class Main {
         myLinkedList.add(1);
         myLinkedList.add(65);
         myLinkedList.add(51);
-        myLinkedList.size();
         myLinkedList.show();
         System.out.println();
-       // myLinkedList.remove(2);
+        myLinkedList.remove(65);
         myLinkedList.show();
         System.out.println();
-        //myLinkedList.clear();
-        myLinkedList.show();
-        myLinkedList.get(1);
 
         System.out.println("Следующее задание MyQueue:");
         MyQueue myQueue = new MyQueue(6, new Object[]{5,8,1,3,9});
@@ -47,11 +43,6 @@ public class Main {
         myQueue.print();
         System.out.println();
         myQueue.remove(4);
-        myQueue.print();
-        System.out.println();
-        myQueue.print();
-        System.out.println();
-        myQueue.peek();
         myQueue.print();
         System.out.println();
         myQueue.poll();
