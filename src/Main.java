@@ -23,7 +23,7 @@ public class Main {
         myList.print();
         System.out.println();
 
-        System.out.println("Следующее задание MyLinkedList:");
+        System.out.println("next task MyLinkedList:");
         MyLinkedList myLinkedList = new MyLinkedList(){};
         myLinkedList.add(5);
         myLinkedList.add(1);
@@ -35,7 +35,7 @@ public class Main {
         myLinkedList.show();
         System.out.println();
 
-        System.out.println("Следующее задание MyQueue:");
+        System.out.println("next task MyQueue:");
         MyQueue myQueue = new MyQueue(6, new Object[]{5,8,1,3,9});
         myQueue.print();
         System.out.println();
@@ -50,7 +50,7 @@ public class Main {
         System.out.println();
 
 
-        System.out.println("Следующее задание MyStack:");
+        System.out.println("next task MyStack:");
         MyStack myStack = new MyStack(5,new Object[]{14,15,49,12});
         myStack.push(457);
         myStack.print();
