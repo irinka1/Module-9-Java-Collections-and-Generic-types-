@@ -22,7 +22,7 @@ public class MyQueue<T> {
         size++;
     }
 
-    //remove(int index) удаляет элемент под индексом
+    //remove(int index) remove element by the index
     public void remove(int index){
         for (int i = 0; i < array.length; i++) {
             array[index] = null;
@@ -31,7 +31,7 @@ public class MyQueue<T> {
 
     }
 
-    //clear() очищает коллекцию
+    //clear() clear collection
     public void clear(){
         for (int i = 0; i < array.length; i++) {
             array[i] = null;
@@ -39,7 +39,7 @@ public class MyQueue<T> {
 
     }
 
-    //size() возвращает размер коллекции
+    //size() return the size of collection
     int total=0;
     public int size(){
         for (int i = 0; i < array.length; i++){
@@ -53,7 +53,7 @@ public class MyQueue<T> {
         return array[0];
     }
 
-    //poll() возвращает первый элемент в очереди и удаляет его из коллекции
+    //poll() return first element from the queue and remove from the coolection
 
     public Object poll() {
         array[0] = null;
