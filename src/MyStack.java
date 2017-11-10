@@ -23,8 +23,7 @@ public class MyStack<T> {
         size++;
     }
 
-    //remove(int index) удаляет элемент под индексом
-    public void remove(int index){
+       public void remove(int index){
         for (int i = 0; i < array.length; i++) {
             array[index] = null;
 
@@ -32,7 +31,6 @@ public class MyStack<T> {
 
     }
 
-    //clear() очищает коллекцию
     public void clear(){
         for (int i = 0; i < array.length; i++) {
             array[i] = null;
@@ -40,8 +38,7 @@ public class MyStack<T> {
 
     }
 
-    //size() возвращает размер коллекции
-    int total=0;
+       int total=0;
     public int size(){
         for (int i = 0; i < array.length; i++){
             total += Arrays.asList(array).indexOf(i);
@@ -54,9 +51,7 @@ public class MyStack<T> {
         return array[0];
     }
 
-    //poll() возвращает первый элемент в очереди и удаляет его из коллекции
-
-    public Object pop() {
+      public Object pop() {
         array[0] = null;
         return array[0];
     }
