@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Iterator;
 
-public class MyArrayList<T> {   //далее вместо Т будет подставляться класс
+public class MyArrayList<T> {   //Further, instead of T, the class
     int index;
     public Object [] array;;
     int size;
@@ -24,7 +24,7 @@ public class MyArrayList<T> {   //далее вместо Т будет подс
         size++;
     }
 
-    //remove(int index) удаляет элемент под индексом
+    //remove(int index) the item by the index
     public void remove(int index){
         for (int i = 0; i < array.length; i++) {
             array[index] = null;
@@ -33,7 +33,7 @@ public class MyArrayList<T> {   //далее вместо Т будет подс
 
     }
 
-    //clear() очищает коллекцию
+    //clear() clear the collection
     public void clear(){
         for (int i = 0; i < array.length; i++) {
             array[i] = null;
@@ -41,7 +41,7 @@ public class MyArrayList<T> {   //далее вместо Т будет подс
 
     }
 
-    //size() возвращает размер коллекции
+    //size() returns the size of the collection
     int total=0;
     public void size(){
         for (int i = 0; i < array.length; i++){
